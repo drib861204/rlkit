@@ -38,7 +38,7 @@ def experiment(
     torch.manual_seed(seed)
     #eval_env.seed(seed)
     #expl_env.seed(seed)
-    print("SEED:",seed)
+    print("SEED:", seed)
 
     M = layer_size
     qf1 = ConcatMlp(

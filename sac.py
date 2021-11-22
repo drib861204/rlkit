@@ -1,5 +1,5 @@
 import rlkit.torch.pytorch_util as ptu
-from rlkit.data_management.env_replay_buffer import EnvReplayBuffer
+#from rlkit.data_management.env_replay_buffer import EnvReplayBuffer
 #from rlkit.envs.wrappers import NormalizedBoxEnv
 from rlkit.launchers.launcher_util import run_experiment
 from rlkit.samplers.data_collector import MdpPathCollector
@@ -36,8 +36,9 @@ def experiment(
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    eval_env.seed(seed)
-    expl_env.seed(seed)
+    #eval_env.seed(seed)
+    #expl_env.seed(seed)
+    print("SEED:",seed)
 
     M = layer_size
     qf1 = ConcatMlp(
